@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Cookie-HOO/ccuv-dataset-catalog/schemas/catalog-body.schema.json",
+  "title": "CCUV official dataset catalog signed body",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "catalog_version", "issued_at", "expires_at", "entries"],
+  "properties": {
+    "schema": {"const": "ccuv.official-dataset-catalog/v1"},
+    "catalog_version": {"const": 1},
+    "issued_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "entries": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/entry"}
+    }
+  },
+  "$defs": {
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh-CN"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "zh-CN": {"type": "string", "minLength": 1}
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "description", "artifacts"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$"},
+        "title": {"$ref": "#/$defs/localizedText"},
+        "description": {"$ref": "#/$defs/localizedText"},
+        "artifacts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/artifact"}}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "release_tag", "asset_name", "download_url", "sha256", "manifest_sha256", "size", "platform"],
+      "properties": {
+        "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+        "release_tag": {"type": "string", "minLength": 1},
+        "asset_name": {"type": "string", "minLength": 1},
+        "download_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "size": {"type": "integer", "minimum": 1},
+        "platform": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["os", "arch"],
+          "properties": {"os": {"type": "string", "minLength": 1}, "arch": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}

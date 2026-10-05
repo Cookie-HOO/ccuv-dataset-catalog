@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Cookie-HOO/ccuv-dataset-catalog/schemas/catalog-envelope.schema.json",
+  "title": "CCUV official dataset catalog envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "key_id", "signed", "signature"],
+  "properties": {
+    "schema": {"const": "ccuv.official-dataset-catalog-envelope/v1"},
+    "key_id": {"type": "string", "minLength": 1},
+    "signed": {"$ref": "catalog-body.schema.json"},
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "encoding", "value"],
+      "properties": {
+        "algorithm": {"const": "Ed25519"},
+        "encoding": {"const": "base64"},
+        "value": {"type": "string", "contentEncoding": "base64"}
+      }
+    }
+  }
+}

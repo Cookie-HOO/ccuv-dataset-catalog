@@ -1,0 +1,21 @@
+# macOS and editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# Go build outputs
+bin/
+coverage.out
+
+# Never commit signing material. Catalog bodies and signed envelopes are public,
+# reviewable release metadata and are intentionally tracked when they exist.
+keys/*.key
+keys/*.pem
+keys/*.der
+keys/*.p8
+keys/*.seed
+!keys/README.md
+
+# Local signing inputs/outputs
+*.private
+*.private-key

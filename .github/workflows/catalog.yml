@@ -1,0 +1,86 @@
+name: Catalog
+
+on:
+  pull_request:
+    paths:
+      - "catalog/catalog.json"
+      - "keys/ccuv-official-2026-01.pub"
+      - "schemas/**"
+      - "cmd/**"
+      - "internal/**"
+      - ".github/workflows/catalog.yml"
+  push:
+    branches: [main]
+    paths:
+      - "catalog/catalog.json"
+      - "keys/ccuv-official-2026-01.pub"
+      - "schemas/**"
+      - "cmd/**"
+      - "internal/**"
+      - ".github/workflows/catalog.yml"
+  workflow_dispatch:
+    inputs:
+      key_id:
+        description: Approved production signing key ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: test -z "$(gofmt -l $(find cmd internal -name '*.go' -type f))"
+      - run: go test ./...
+      - run: go vet ./...
+
+  verify-catalog:
+    if: ${{ hashFiles('catalog/catalog.json') != '' && hashFiles('keys/ccuv-official-2026-01.pub') != '' }}
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: go run ./cmd/ccuv-catalog verify --catalog catalog/catalog.json --public-key keys/ccuv-official-2026-01.pub
+
+  publish-catalog:
+    # This protected environment is activated only after branch/review controls.
+    # CATALOG_SIGNING_SEED is exposed exclusively to this job and is never logged.
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    needs: test
+    runs-on: ubuntu-latest
+    environment: catalog-publication
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Sign reviewed body
+        env:
+          CATALOG_SIGNING_SEED: ${{ secrets.CATALOG_SIGNING_SEED }}
+        run: |
+          test "${{ inputs.key_id }}" = "ccuv-official-2026-01"
+          test -n "$CATALOG_SIGNING_SEED"
+          go run ./cmd/ccuv-catalog sign \
+            --body catalog/signed.json \
+            --key-id "${{ inputs.key_id }}" \
+            --private-key-env CATALOG_SIGNING_SEED \
+            --out catalog/catalog.json
+      - name: Verify signed result with public key only
+        run: go run ./cmd/ccuv-catalog verify --catalog catalog/catalog.json --public-key keys/ccuv-official-2026-01.pub
+      - name: Keep signed artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog
+          path: catalog/catalog.json
+          if-no-files-found: error

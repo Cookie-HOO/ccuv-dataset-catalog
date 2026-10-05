@@ -1,0 +1,16 @@
+{
+  "schema": "ccuv.official-dataset-catalog-envelope/v1",
+  "key_id": "test-fixture-only",
+  "signed": {
+    "schema": "ccuv.official-dataset-catalog/v1",
+    "catalog_version": 1,
+    "issued_at": "2030-01-01T00:00:00Z",
+    "expires_at": "2030-01-31T00:00:00Z",
+    "entries": []
+  },
+  "signature": {
+    "algorithm": "Ed25519",
+    "encoding": "base64",
+    "value": "HDAq9gAtedugUARWv2LbJHyY1xEJRdFUVGwkJAKs+7/v2pzzR0UnrZ+z4KzeDwFeKfmCjpiIPUsnTcA/PJK3CA=="
+  }
+}
