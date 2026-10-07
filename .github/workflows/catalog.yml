@@ -39,6 +39,7 @@ jobs:
       - run: test -z "$(gofmt -l $(find cmd internal -name '*.go' -type f))"
       - run: go test ./...
       - run: go vet ./...
+      - run: go run ./scripts/update-readmes.go --check
 
   verify-catalog:
     if: ${{ hashFiles('catalog/catalog.json') != '' && hashFiles('keys/ccuv-official-2026-01.pub') != '' }}

@@ -1,6 +1,18 @@
 # CCUV Dataset Catalog
 
-A standard-library Go foundation for signing and verifying the CCUV official dataset catalog contract. It ships no private signing material and no production `catalog/catalog.json` yet: the first runtime envelope must be created only after a real immutable dataset release exists. The only catalog envelope under `fixtures/` is deliberately invalid (placeholder signature) and exists solely to prove rejection paths; it cannot be accepted by CCUV.
+[简体中文](README.zh-CN.md)
+
+The signed official index used by `ccuv dataset` to browse and install trusted executable datasets. The catalog records each release asset's immutable SHA-256 and platform metadata; CCUV verifies both the catalog signature and the downloaded archive.
+
+## Official datasets
+
+The table below is generated from the signed [`catalog/catalog.json`](catalog/catalog.json). The catalog is the source of truth; detailed descriptions and setup instructions remain in each dataset's manifest.
+
+<!-- datasets:start -->
+| Dataset | Summary | Repository | Platforms |
+| --- | --- | --- | --- |
+| [WeRead](https://github.com/Cookie-HOO/ccuv-dataset-weread) | Visualize your WeRead reading time and book activity. | Cookie-HOO/ccuv-dataset-weread | darwin/amd64, darwin/arm64, linux/amd64, windows/amd64 |
+<!-- datasets:end -->
 
 ## Contract
 
@@ -11,7 +23,7 @@ CCUV verifies an envelope with these exact top-level members:
 - Signature: base64-encoded raw `Ed25519` signature
 - Signed bytes: RFC 8785 JSON Canonicalization Scheme representation of `signed`
 
-Schemas are versioned in [schemas/](schemas/). Each entry has a localized `title`, a short localized `summary` for browsing, and one canonical `repository`; platform artifacts then describe immutable release assets without repeating the repository. The consumer independently enforces catalog lifetime, exact entry/artifact fields, digest formats, and trusted GitHub release URLs. This foundation does not yet duplicate those full consumer semantic checks, so a catalog must be validated by the released ccuv consumer before signing or publication.
+Schemas are versioned in [schemas/](schemas/). Each entry has a localized `title`, a short localized `summary` for browsing, and one canonical `repository`; platform artifacts then describe immutable release assets without repeating the repository. The consumer enforces exact entry/artifact fields, digest formats, and trusted GitHub release URLs. A catalog must be validated by the released ccuv consumer before signing or publication.
 
 ## Tooling
 
@@ -43,7 +55,7 @@ go run ./cmd/ccuv-catalog sign \
   --out catalog/catalog.json
 ```
 
-The protected workflow exposes `CATALOG_SIGNING_SEED` only to its `publish-catalog` job. It never writes or prints the seed, and verifies the completed envelope using only the committed public key. Do not use the template as an artifact: it contains placeholder timestamps and lives outside `catalog/catalog.json`. The runtime catalog path must remain absent until a released dataset artifact supplies immutable digest and size metadata.
+The protected workflow exposes `CATALOG_SIGNING_SEED` only to its `publish-catalog` job. It never writes or prints the seed, and verifies the completed envelope using only the committed public key. Do not use the template as an artifact: it contains placeholder timestamps and lives outside `catalog/catalog.json`.
 
 When release metadata is ready, commit the reviewable `catalog/signed.json` through a protected PR, sign it, validate the envelope with released ccuv, and commit the resulting `catalog/catalog.json` to `main`. Uploading an Actions artifact alone never publishes the fixed raw-GitHub runtime URL.
 

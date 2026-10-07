@@ -160,13 +160,13 @@ func validateSigned(data []byte) error {
 	if err := strictDecode(data, &raw); err != nil {
 		return fmt.Errorf("invalid signed body: %w", err)
 	}
-	if !exactKeys(raw, "schema", "catalog_version", "issued_at", "expires_at", "entries") {
+	if !exactKeys(raw, "schema", "catalog_version", "issued_at", "entries") {
 		return errors.New("invalid signed body fields")
 	}
 	if string(raw["schema"]) != `"`+SignedSchema+`"` || string(raw["catalog_version"]) != "1" {
 		return errors.New("unsupported signed catalog schema")
 	}
-	for _, key := range []string{"issued_at", "expires_at", "entries"} {
+	for _, key := range []string{"issued_at", "entries"} {
 		if len(raw[key]) == 0 {
 			return fmt.Errorf("signed body missing %s", key)
 		}

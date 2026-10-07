@@ -67,13 +67,12 @@
         }
       }
     ],
-    "expires_at": "2026-11-06T07:51:24Z",
     "issued_at": "2026-10-07T07:51:24Z",
     "schema": "ccuv.official-dataset-catalog/v1"
   },
   "signature": {
     "algorithm": "Ed25519",
     "encoding": "base64",
-    "value": "jSiw5BunDF1DH1dUIZYc0xtxog/uY2LFFfQ6PSDLCok9O8UHP2l+bzu/8wKj2cxGjeglADSMTS3ElqBo8mQzAw=="
+    "value": "/FMpMdrU+shprYByLkUa10rpJuikkPSf0DqfWLQzUDwG2JVxvGilbN2MQjRMhYUjhQnHpYw27TKjA5tEngT1AQ=="
   }
 }

@@ -4,12 +4,11 @@
   "title": "CCUV official dataset catalog signed body",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "catalog_version", "issued_at", "expires_at", "entries"],
+  "required": ["schema", "catalog_version", "issued_at", "entries"],
   "properties": {
     "schema": {"const": "ccuv.official-dataset-catalog/v1"},
     "catalog_version": {"const": 1},
     "issued_at": {"type": "string", "format": "date-time"},
-    "expires_at": {"type": "string", "format": "date-time"},
     "entries": {
       "type": "array",
       "items": {"$ref": "#/$defs/entry"}

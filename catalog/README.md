@@ -1,3 +1,3 @@
-# Publish location
+# Published catalog
 
-`catalog/catalog.json` is the intended production artifact path, but it is intentionally gitignored and absent from this foundation. CCUV must not consume any catalog from this repository until maintainers establish a production signing key, publish its public half through the CCUV release process, and produce a separately reviewed signed artifact.
+`catalog/catalog.json` is the production artifact consumed from the fixed official raw-GitHub URL by CCUV. It is an Ed25519-signed envelope generated from the reviewable [`signed.json`](signed.json); every change to the signed body must be re-signed with the official key and verified before publication.

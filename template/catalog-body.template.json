@@ -2,6 +2,5 @@
   "schema": "ccuv.official-dataset-catalog/v1",
   "catalog_version": 1,
   "issued_at": "REPLACE_WITH_UTC_TIMESTAMP",
-  "expires_at": "REPLACE_WITH_UTC_TIMESTAMP",
   "entries": []
 }
