@@ -11,7 +11,7 @@ CCUV verifies an envelope with these exact top-level members:
 - Signature: base64-encoded raw `Ed25519` signature
 - Signed bytes: RFC 8785 JSON Canonicalization Scheme representation of `signed`
 
-Schemas are versioned in [schemas/](schemas/). The consumer independently enforces catalog lifetime, exact entry/artifact fields, digest formats, and trusted GitHub release URLs. This foundation does not yet duplicate those full consumer semantic checks, so a catalog must be validated by the released ccuv consumer before signing or publication.
+Schemas are versioned in [schemas/](schemas/). Each entry has a localized `title`, a short localized `summary` for browsing, and one canonical `repository`; platform artifacts then describe immutable release assets without repeating the repository. The consumer independently enforces catalog lifetime, exact entry/artifact fields, digest formats, and trusted GitHub release URLs. This foundation does not yet duplicate those full consumer semantic checks, so a catalog must be validated by the released ccuv consumer before signing or publication.
 
 ## Tooling
 
