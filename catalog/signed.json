@@ -1,7 +1,7 @@
 {
   "schema": "ccuv.official-dataset-catalog/v1",
   "catalog_version": 1,
-  "issued_at": "2026-10-07T07:51:24Z",
+  "issued_at": "2026-10-17T08:37:41Z",
   "entries": [
     {
       "id": "weread",
@@ -16,40 +16,52 @@
       "repository": "Cookie-HOO/ccuv-dataset-weread",
       "artifacts": [
         {
-          "release_tag": "v0.0.1",
+          "release_tag": "v0.1.0",
           "asset_name": "ccuv-dataset-weread-darwin-arm64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.0.1/ccuv-dataset-weread-darwin-arm64.tar.gz",
-          "sha256": "f67318f0e14f284688ada72e1641759ae4b9b0c6a46aa096ce49112702ce0662",
-          "manifest_sha256": "8836c56b6082f9c54a0e0a81c0993fe6c89ec203d37e9176e2a55c7f211eec7d",
-          "size": 2824701,
-          "platform": {"os": "darwin", "arch": "arm64"}
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-darwin-arm64.tar.gz",
+          "sha256": "a1f9a859d643bfa333d46ba6fe6f09038ff6b9008d58380631d8869009383fb0",
+          "manifest_sha256": "628fd2e6e677efe13a7e41b43373bf518a5be7b94f8219867aa5ac4d40ddc407",
+          "size": 2824746,
+          "platform": {
+            "os": "darwin",
+            "arch": "arm64"
+          }
         },
         {
-          "release_tag": "v0.0.1",
+          "release_tag": "v0.1.0",
           "asset_name": "ccuv-dataset-weread-darwin-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.0.1/ccuv-dataset-weread-darwin-amd64.tar.gz",
-          "sha256": "b07047b2819fff38395735b81dd7c526eb1b75e1d9b44abcfbcc76616200bb94",
-          "manifest_sha256": "5c9d29e9d46e597587294a1420a28ca061a8e18ea03aea51cedefd30f544d70e",
-          "size": 3062642,
-          "platform": {"os": "darwin", "arch": "amd64"}
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-darwin-amd64.tar.gz",
+          "sha256": "4737be27b8f1ae2a50e973164d58dba34e5da6d6188c8cba310fde1fbbe5352d",
+          "manifest_sha256": "5fd46d0d097288bf63eda1b2eb53c62df38f730559c89a5b17d39abb3846c9ed",
+          "size": 3062504,
+          "platform": {
+            "os": "darwin",
+            "arch": "amd64"
+          }
         },
         {
-          "release_tag": "v0.0.1",
+          "release_tag": "v0.1.0",
           "asset_name": "ccuv-dataset-weread-linux-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.0.1/ccuv-dataset-weread-linux-amd64.tar.gz",
-          "sha256": "25453604bff2ac9c63943a48f3154569902136e2196031b869a7f675c5114c73",
-          "manifest_sha256": "1225274739d7a5e4280eb46d57adbf9c66bea044aaa1aae709a95ed392b0117e",
-          "size": 3007150,
-          "platform": {"os": "linux", "arch": "amd64"}
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-linux-amd64.tar.gz",
+          "sha256": "33067ec382a43e7d96b02536d1d03a489f2d3148ef7bd98180cfd5643c88ca5e",
+          "manifest_sha256": "edadf9ebaa153775bb73efa6c2c25febddce8b306e65c746ab61f995fab0fef3",
+          "size": 3007472,
+          "platform": {
+            "os": "linux",
+            "arch": "amd64"
+          }
         },
         {
-          "release_tag": "v0.0.1",
+          "release_tag": "v0.1.0",
           "asset_name": "ccuv-dataset-weread-windows-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.0.1/ccuv-dataset-weread-windows-amd64.tar.gz",
-          "sha256": "602789443554997048fb836118ca58cf66cb04012e5cabc8db024d1fc7e41b12",
-          "manifest_sha256": "24dc0c13e82e59eb7fdd6a6d8c1c3a0896ecd2e2431e90344a6ba11389a32181",
-          "size": 3099329,
-          "platform": {"os": "windows", "arch": "amd64"}
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-windows-amd64.tar.gz",
+          "sha256": "b113dcea30a41320590a1d4bc723cc678adb569360a8a22d7a20059123ee31e1",
+          "manifest_sha256": "bbce7feef5c26cc7e553978dda1eac3b188a041cb330c5ca0b020ed0f36e6bfb",
+          "size": 3099553,
+          "platform": {
+            "os": "windows",
+            "arch": "amd64"
+          }
         }
       ]
     }
