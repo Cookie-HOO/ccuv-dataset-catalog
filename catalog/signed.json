@@ -1,7 +1,7 @@
 {
   "schema": "ccuv.official-dataset-catalog/v1",
   "catalog_version": 1,
-  "issued_at": "2026-10-17T08:37:41Z",
+  "issued_at": "2026-10-18T09:59:11Z",
   "entries": [
     {
       "id": "weread",
@@ -16,48 +16,48 @@
       "repository": "Cookie-HOO/ccuv-dataset-weread",
       "artifacts": [
         {
-          "release_tag": "v0.1.0",
+          "release_tag": "v0.1.1",
           "asset_name": "ccuv-dataset-weread-darwin-arm64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-darwin-arm64.tar.gz",
-          "sha256": "a1f9a859d643bfa333d46ba6fe6f09038ff6b9008d58380631d8869009383fb0",
-          "manifest_sha256": "628fd2e6e677efe13a7e41b43373bf518a5be7b94f8219867aa5ac4d40ddc407",
-          "size": 2824746,
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.1/ccuv-dataset-weread-darwin-arm64.tar.gz",
+          "sha256": "97adf5a8816f490a7782b0deec801bc9fa5f3d9f16646cf40ae90bfca9c15d00",
+          "manifest_sha256": "7e959e8bc0a8f6b0c1fbe1a8fc82939823fd045214d62a3816316b69769f2303",
+          "size": 2932234,
           "platform": {
             "os": "darwin",
             "arch": "arm64"
           }
         },
         {
-          "release_tag": "v0.1.0",
+          "release_tag": "v0.1.1",
           "asset_name": "ccuv-dataset-weread-darwin-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-darwin-amd64.tar.gz",
-          "sha256": "4737be27b8f1ae2a50e973164d58dba34e5da6d6188c8cba310fde1fbbe5352d",
-          "manifest_sha256": "5fd46d0d097288bf63eda1b2eb53c62df38f730559c89a5b17d39abb3846c9ed",
-          "size": 3062504,
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.1/ccuv-dataset-weread-darwin-amd64.tar.gz",
+          "sha256": "65ffbe4d305efd94cb6ff65eb0ff9a3f5809e488fe5e42402df286f173202eba",
+          "manifest_sha256": "9fcdec6db36ca0fda488d03febd82d4ad946597687659e06de447976c1ed98e7",
+          "size": 3168013,
           "platform": {
             "os": "darwin",
             "arch": "amd64"
           }
         },
         {
-          "release_tag": "v0.1.0",
+          "release_tag": "v0.1.1",
           "asset_name": "ccuv-dataset-weread-linux-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-linux-amd64.tar.gz",
-          "sha256": "33067ec382a43e7d96b02536d1d03a489f2d3148ef7bd98180cfd5643c88ca5e",
-          "manifest_sha256": "edadf9ebaa153775bb73efa6c2c25febddce8b306e65c746ab61f995fab0fef3",
-          "size": 3007472,
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.1/ccuv-dataset-weread-linux-amd64.tar.gz",
+          "sha256": "829799675f88c0a6b1d1bd4714082385e255379521c0293b1fec726d9b6e50ff",
+          "manifest_sha256": "90daddba814e222a019ea20dbe6d91aeada095c73e5e3bc1935b711499c88cf3",
+          "size": 3115409,
           "platform": {
             "os": "linux",
             "arch": "amd64"
           }
         },
         {
-          "release_tag": "v0.1.0",
+          "release_tag": "v0.1.1",
           "asset_name": "ccuv-dataset-weread-windows-amd64.tar.gz",
-          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.0/ccuv-dataset-weread-windows-amd64.tar.gz",
-          "sha256": "b113dcea30a41320590a1d4bc723cc678adb569360a8a22d7a20059123ee31e1",
-          "manifest_sha256": "bbce7feef5c26cc7e553978dda1eac3b188a041cb330c5ca0b020ed0f36e6bfb",
-          "size": 3099553,
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.1/ccuv-dataset-weread-windows-amd64.tar.gz",
+          "sha256": "d98e0f55f59d9e265d012f3d2459e698436136453e9c3b7bbe1187295f0cbb29",
+          "manifest_sha256": "e366f53176034a8928c7b3d6c5d932fa412be470810ad863f448b7e81edd6647",
+          "size": 3208130,
           "platform": {
             "os": "windows",
             "arch": "amd64"
