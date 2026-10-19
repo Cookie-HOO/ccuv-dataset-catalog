@@ -12,6 +12,7 @@ The table below is generated from the signed [`catalog/catalog.json`](catalog/ca
 | Dataset | Summary | Repository | Platforms |
 | --- | --- | --- | --- |
 | [WeRead](https://github.com/Cookie-HOO/ccuv-dataset-weread) | Visualize your WeRead reading time and book activity. | Cookie-HOO/ccuv-dataset-weread | darwin/amd64, darwin/arm64, linux/amd64, windows/amd64 |
+| [OpenStarMap](https://github.com/Cookie-HOO/ccuv-dataset-openstarmap) | Discover current open-source projects through Stars, growth, and public recommendations. | Cookie-HOO/ccuv-dataset-openstarmap | darwin/amd64, darwin/arm64, linux/amd64, windows/amd64 |
 <!-- datasets:end -->
 
 ## Contract

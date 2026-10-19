@@ -1,7 +1,7 @@
 {
   "schema": "ccuv.official-dataset-catalog/v1",
   "catalog_version": 1,
-  "issued_at": "2026-10-18T09:59:11Z",
+  "issued_at": "2026-10-19T10:25:00Z",
   "entries": [
     {
       "id": "weread",
@@ -58,6 +58,68 @@
           "sha256": "d98e0f55f59d9e265d012f3d2459e698436136453e9c3b7bbe1187295f0cbb29",
           "manifest_sha256": "e366f53176034a8928c7b3d6c5d932fa412be470810ad863f448b7e81edd6647",
           "size": 3208130,
+          "platform": {
+            "os": "windows",
+            "arch": "amd64"
+          }
+        }
+      ]
+    },
+    {
+      "id": "openstarmap",
+      "title": {
+        "en": "OpenStarMap",
+        "zh-CN": "开源星图"
+      },
+      "summary": {
+        "en": "Discover current open-source projects through Stars, growth, and public recommendations.",
+        "zh-CN": "通过 Star、增长趋势与公开推荐发现当前开源项目。"
+      },
+      "repository": "Cookie-HOO/ccuv-dataset-openstarmap",
+      "artifacts": [
+        {
+          "release_tag": "v0.1.0",
+          "asset_name": "ccuv-dataset-openstarmap-darwin-amd64.tar.gz",
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-openstarmap/releases/download/v0.1.0/ccuv-dataset-openstarmap-darwin-amd64.tar.gz",
+          "sha256": "0359c13df3e7cdc143acf1bf5148eb22b47fef9ae6c861446815bd02cfffdefe",
+          "manifest_sha256": "ed234a333009cac1fa307f8bab6372bf49efb0b5842c2d8f61883a7fdf208be8",
+          "size": 3170011,
+          "platform": {
+            "os": "darwin",
+            "arch": "amd64"
+          }
+        },
+        {
+          "release_tag": "v0.1.0",
+          "asset_name": "ccuv-dataset-openstarmap-darwin-arm64.tar.gz",
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-openstarmap/releases/download/v0.1.0/ccuv-dataset-openstarmap-darwin-arm64.tar.gz",
+          "sha256": "7f37180cbf05854f3db888e38b60770f7d76ccdd731befb58579fe7b85c5744b",
+          "manifest_sha256": "fe23972187b813071afe74c6721cad14e33a06574333c6f2a8bc44428a69acbc",
+          "size": 2931808,
+          "platform": {
+            "os": "darwin",
+            "arch": "arm64"
+          }
+        },
+        {
+          "release_tag": "v0.1.0",
+          "asset_name": "ccuv-dataset-openstarmap-linux-amd64.tar.gz",
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-openstarmap/releases/download/v0.1.0/ccuv-dataset-openstarmap-linux-amd64.tar.gz",
+          "sha256": "e51e85f9530dc09d1e2fab41d14f1df5e0dc051641d2bf758e917e4971fb276d",
+          "manifest_sha256": "432fa23adc648cb2dd3492323726ecbbf54d7bc3c0bb3ab96b1994b9606f7e84",
+          "size": 3119381,
+          "platform": {
+            "os": "linux",
+            "arch": "amd64"
+          }
+        },
+        {
+          "release_tag": "v0.1.0",
+          "asset_name": "ccuv-dataset-openstarmap-windows-amd64.tar.gz",
+          "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-openstarmap/releases/download/v0.1.0/ccuv-dataset-openstarmap-windows-amd64.tar.gz",
+          "sha256": "50a1a7bcfcf9a55c0b39eded2f163c1d09e5ec4f3e12542a0322f034954528a6",
+          "manifest_sha256": "b5dc502dd1f6f62d5c2f178e47ac2252bde6c2d3e705fbeeabf4c44b5e19661d",
+          "size": 3209485,
           "platform": {
             "os": "windows",
             "arch": "amd64"
