@@ -42,7 +42,6 @@ jobs:
       - run: go run ./scripts/update-readmes.go --check
 
   verify-catalog:
-    if: ${{ hashFiles('catalog/catalog.json') != '' && hashFiles('keys/ccuv-official-2026-01.pub') != '' }}
     needs: test
     runs-on: ubuntu-latest
     steps:
