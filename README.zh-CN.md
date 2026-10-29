@@ -12,7 +12,6 @@
 | 数据集 | 简介 | 仓库 | 支持平台 |
 | --- | --- | --- | --- |
 | [微信读书 (WeRead)](https://github.com/Cookie-HOO/ccuv-dataset-weread) | 将微信读书的阅读时长和书籍活动可视化。 | Cookie-HOO/ccuv-dataset-weread | darwin/amd64, darwin/arm64, linux/amd64, windows/amd64 |
-| [开源星图 (OpenStarMap)](https://github.com/Cookie-HOO/ccuv-dataset-openstarmap) | 通过 Star、增长趋势与公开推荐发现当前开源项目。 | Cookie-HOO/ccuv-dataset-openstarmap | darwin/amd64, darwin/arm64, linux/amd64, windows/amd64 |
 <!-- datasets:end -->
 
 ## 协议
