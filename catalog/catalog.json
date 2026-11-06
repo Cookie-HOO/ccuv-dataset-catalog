@@ -8,51 +8,51 @@
         "artifacts": [
           {
             "asset_name": "ccuv-dataset-weread-darwin-arm64.tar.gz",
-            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.2/ccuv-dataset-weread-darwin-arm64.tar.gz",
-            "manifest_sha256": "ec09875923741777232dccada335d640aee73a1ff1486e14eb1507bbdbf8c06f",
+            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.3/ccuv-dataset-weread-darwin-arm64.tar.gz",
+            "manifest_sha256": "04a75a6a1363fb0f178fd88a68733405fc831369a455665f42742b855eda5a48",
             "platform": {
               "arch": "arm64",
               "os": "darwin"
             },
-            "release_tag": "v0.1.2",
-            "sha256": "38d56027c221e5a9383a93982ee31c3f37c8b9fff36c507da5c22995bdc333d8",
-            "size": 2932458
+            "release_tag": "v0.1.3",
+            "sha256": "b06c22b14305076894129f8204addd3720cd5d8562fdc2c375939511f09c931a",
+            "size": 2932146
           },
           {
             "asset_name": "ccuv-dataset-weread-darwin-amd64.tar.gz",
-            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.2/ccuv-dataset-weread-darwin-amd64.tar.gz",
-            "manifest_sha256": "712082e612a00239e2f88b1f49c540c15837b7c05a0da2334d79bb5f54820852",
+            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.3/ccuv-dataset-weread-darwin-amd64.tar.gz",
+            "manifest_sha256": "643a359438c3577e7ef0e4e8508cecb5d4b6b60669d30e865b71f7f7108b6e48",
             "platform": {
               "arch": "amd64",
               "os": "darwin"
             },
-            "release_tag": "v0.1.2",
-            "sha256": "f2756669ce8094bba529bb0b39d4529ab594dfe5d47340b0322ba4aa3a7b6fc2",
-            "size": 3167671
+            "release_tag": "v0.1.3",
+            "sha256": "3f77808100af09b45ec138ea54db513d938ec2bf2417bb6f547b150313d5cadd",
+            "size": 3167611
           },
           {
             "asset_name": "ccuv-dataset-weread-linux-amd64.tar.gz",
-            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.2/ccuv-dataset-weread-linux-amd64.tar.gz",
-            "manifest_sha256": "a922edb4eb6650652f587f005dfc2b90cfc574ca095ecbc4ca5e030f6227aa00",
+            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.3/ccuv-dataset-weread-linux-amd64.tar.gz",
+            "manifest_sha256": "338d3c2624d456fedb604912e452c0191f02cbbfdf6e46fe6523e0e3606a24e6",
             "platform": {
               "arch": "amd64",
               "os": "linux"
             },
-            "release_tag": "v0.1.2",
-            "sha256": "4b4c50a627e4aa1b7f6c05e30dcc6bd64590c133a5eda0b549ea2e1a0d1afd81",
-            "size": 3115660
+            "release_tag": "v0.1.3",
+            "sha256": "c0701bc183b00041bb98c77dba616837eb3b5fcc7409e31efba471c83e9549cd",
+            "size": 3115278
           },
           {
             "asset_name": "ccuv-dataset-weread-windows-amd64.tar.gz",
-            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.2/ccuv-dataset-weread-windows-amd64.tar.gz",
-            "manifest_sha256": "0c70d70cdaa177076334a301c2bf827062cec900b7bf1df98c2d9a21d72075b1",
+            "download_url": "https://github.com/Cookie-HOO/ccuv-dataset-weread/releases/download/v0.1.3/ccuv-dataset-weread-windows-amd64.tar.gz",
+            "manifest_sha256": "0af74d39176b1ecf87243b9fbc606a8f36f95aa566ea7dc9b46cdb6b8fc8acda",
             "platform": {
               "arch": "amd64",
               "os": "windows"
             },
-            "release_tag": "v0.1.2",
-            "sha256": "25e1a18aad488c5c7980c4cd3fa7ffa69cef2d4157fe1998a999c8d28163b4f5",
-            "size": 3208026
+            "release_tag": "v0.1.3",
+            "sha256": "305e6185425fb68f7dac8003b807431bca6dde40b8285fb2c16069f0b78efc1c",
+            "size": 3208143
           }
         ],
         "id": "weread",
@@ -67,12 +67,12 @@
         }
       }
     ],
-    "issued_at": "2026-10-26T06:05:36Z",
+    "issued_at": "2026-11-06T07:40:26Z",
     "schema": "ccuv.official-dataset-catalog/v1"
   },
   "signature": {
     "algorithm": "Ed25519",
     "encoding": "base64",
-    "value": "+v4teVQuJvZ3/D5h6KsWBGRDIL33JzxMsN1Aoy8jErwJ9EuqFH4YVImpN5CsF5mautR49+4TyAvfUr47+iYfCQ=="
+    "value": "8WM5Bn14wEMeesqfC250QI7M9SXnV1AosNsmiJFlZxNioGU9QUQgUBzoRBhZpabso4WSKiry2XTZXAqBfRWeCA=="
   }
 }
